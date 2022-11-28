@@ -15,7 +15,7 @@ header {
     background-size: cover;
     background-position: bottom;
     height: 500px;
-    font-size: 7em;
+    font-size: 450%;
 }
 header::first-letter {
     font-size: larger;
