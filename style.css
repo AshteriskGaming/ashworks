@@ -116,13 +116,13 @@ p {
     display: flex;
     position: fixed;
     top:0;
-    left:-620px;
+    left:-645px;
     flex-direction: column;
     background: #333;
     transform: translateX(300px);
 }
 .navbar.responsive { /* NavBar Click Open */
-    left:-320px;
+    left:-345px;
 }
 .main.responsive, .header.responsive, .menuBtn.responsive {
     transform: translateX(300px);
@@ -280,6 +280,7 @@ i .icon {
     margin: 0; /* Important for vertical align on mobile phones */
     align-items: center;
     height: fit-content;
+    text-transform: uppercase;
 }
 /* Show the dropdown menu */
 .show {display: block;}
