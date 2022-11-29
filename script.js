@@ -71,10 +71,10 @@ function navBarResponse() {
     } else {
         x.className = "main";
     }
-    x = document.getElementById("mainFooter");
-    if (x.className === "main") {
+    x = document.getElementById("footer");
+    if (x.className === "footer") {
         x.className += " responsive";
     } else {
-        x.className = "main";
+        x.className = "footer";
     }
 }
