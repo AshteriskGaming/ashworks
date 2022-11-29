@@ -15,7 +15,7 @@ header {
     background-size: cover;
     background-position: bottom;
     height: 500px;
-    --variable-value: clamp(1.875rem, -3.125rem + 25vw, 15.625rem);
+    --variable-h1: clamp(1.875rem, -3.125rem + 25vw, 15.625rem);
 }
 header::first-letter {
     font-size: larger;
@@ -70,22 +70,30 @@ body {
     font-size: 1.5em;
     flex-direction: column;
     display: flex;
+    --variable-h2: clamp(1.875rem, 1.602rem + 1.36vw, 2.625rem);;
 }
 h1 {
-    font-size: var(--variable-value);
+    font-size: var(--variable-h1);
     font-family: 'Calligraffitti', serif;
     border-bottom: 1px solid gray;
 }
 h2 {
-    font-size: 16px;
+    font-size: var(--variable-h2);
+    font-family: 'Anek Devanagari', sans-serif;
+    text-transform: uppercase;
     text-decoration: none;
     border-bottom: 1px solid gray;
+}
+p {
+    font-size: var(--variable-p);
+    font-family: 'Anek Devanagari', sans-serif;
 }
 
 /* MENU BUTTON */
 .main {
-    padding: 0.2%;
+    padding: 5%;
     margin: 1%;
+    --variable-p: clamp(0.625rem, 0.17rem + 2.27vw, 1.875rem);
 }
 .menuBtn {
     width: 10%;
@@ -100,7 +108,7 @@ h2 {
 .icon {
     background-color: #ff3176;
     padding: 3% 15% 3% 15%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.8em;
 }
 
@@ -108,13 +116,13 @@ h2 {
     display: flex;
     position: fixed;
     top:0;
-    left:-600px;
+    left:-620px;
     flex-direction: column;
     background: #333;
     transform: translateX(300px);
 }
 .navbar.responsive { /* NavBar Click Open */
-    left:-300px;
+    left:-320px;
 }
 .main.responsive, .header.responsive, .menuBtn.responsive {
     transform: translateX(300px);
@@ -133,12 +141,11 @@ h2 {
 .social-bar {
     display: flex;
     background-color: #7c0006;
-    border-right: 1px solid gray;
     vertical-align: 0.100em;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: center;
     margin: 0;
-    padding: 0;
+    padding: 1%;
 }
 
 .iconify-inline {
@@ -181,7 +188,6 @@ button {
     font-size: 2em;
     padding: 5px 20px 5px 20px;
     margin: 0;
-    font-family: "Lucida Console", monospace;
     text-decoration: none;
 }
 .button1 {
@@ -270,7 +276,7 @@ i .icon {
     border: none;
     padding: 0.689em;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
+    font-family: 'Anek Devanagari', sans-serif; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
     align-items: center;
     height: fit-content;
@@ -346,4 +352,10 @@ i {
 
 iframe {
     text-align: center;
+    width: 100%;
+    background: transparent;
+}
+
+footer {
+    /**/
 }
