@@ -1,3 +1,18 @@
+// Y axis scroll speed
+var velocity = 0.2;
+
+function update(){ 
+    var pos = $(window).scrollTop(); 
+    $('.imgcover').each(function() { 
+        var $element = $(this);
+        // subtract some from the height b/c of the padding
+        var height = $element.height()-18;
+        $(this).css('backgroundPosition', '10% ' + Math.round((height - pos - 100) * velocity) + 'px'); 
+    }); 
+};
+
+$(window).bind('scroll', update);
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function clickToggle1() {
@@ -46,12 +61,6 @@ function navBarResponse() {
     } else {
         x.className = "navbar";
     }
-    x = document.getElementById("myNavbarLeft");
-    if (x.className === "navbar-left") {
-        x.className += " responsive";
-    } else {
-        x.className = "navbar-left";
-    }
     x = document.getElementById("iconSlide");
     if (x.className === "menuBtn") {
         x.className += " responsive";
@@ -65,11 +74,11 @@ function navBarResponse() {
     } else {
         x.className = "header";
     }
-    x = document.getElementById("main");
-    if (x.className === "main") {
+    x = document.getElementById("menu_move");
+    if (x.className === "menu_move") {
         x.className += " responsive";
     } else {
-        x.className = "main";
+        x.className = "menu_move";
     }
     x = document.getElementById("footer");
     if (x.className === "footer") {
